@@ -9,30 +9,32 @@
 
 int stringLenghtFilter = 3;
 string[] arrayInit = new string[] { "hello", "2", "world", ":-)" };
+
 PrintArray(arrayInit);
 Console.Write(" -> ");
+
 string[] arrayFiltered = CreateArrayFiltred(stringLenghtFilter, arrayInit);
 PrintArray(arrayFiltered);
 Console.WriteLine("");
 
 string[] CreateArrayFiltred(int strLenghtFiltr, string[] arrInit)
 {
-    int j = 0;
+    int lenghtArrayNew = 0;
     string[] arrTemp = new string[arrInit.Length];
     for (int i = 0; i < arrInit.Length; i++)
     {
         if (arrInit[i].Length <= stringLenghtFilter)
         {
-            arrTemp[j] = arrInit[i];
-            j++;
+            arrTemp[lenghtArrayNew] = arrInit[i];
+            lenghtArrayNew++;
         }
     }
-    string[] arrRet = new string[j];
-    for (int i = 0; i < j; i++)
+    string[] arrayNew = new string[lenghtArrayNew];
+    for (int i = 0; i < lenghtArrayNew; i++)
     {
-        arrRet[i] = arrTemp[i];
+        arrayNew[i] = arrTemp[i];
     }
-    return arrRet;
+    return arrayNew;
 }
 
 void PrintArray(string[] arr)

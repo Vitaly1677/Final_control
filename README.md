@@ -34,12 +34,15 @@
 
 `git push`
 
-## 9. Добавил задание в файл Program.cs
+## 9. Добавил задание и решение в файл Program.cs
 
 `git commit -am"Добавил задание в файл Program.cs"`
 
 `git push`
 
+`git commit -am"Добавил текст программы"`
+
+`git push`
 
 
 ## ***Текст задания:***
